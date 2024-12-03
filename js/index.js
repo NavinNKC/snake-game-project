@@ -13,6 +13,16 @@ let snakeArr = [
 
 food = {x: 6, y: 7};
 
+// Add event listener for the speed slider
+const speedSlider = document.getElementById('speedSlider');
+const speedValue = document.getElementById('speedValue');
+
+// Update speed dynamically
+speedSlider.addEventListener('input', () => {
+    speed = parseInt(speedSlider.value);
+    speedValue.textContent = speed;
+});
+
 // Game Functions
 function main(ctime) {
     window.requestAnimationFrame(main);
